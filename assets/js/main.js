@@ -195,6 +195,47 @@ $(function () {
     })
 })
 
+$(function(){
+    let swiper;
+
+function initSwiper() {
+    if (window.innerWidth > 768) {
+        // Initialize Swiper only for larger screens
+        if (!swiper) {
+            swiper = new Swiper('.serviceSwiper', {
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                slidesPerView: 4,
+            });
+        }
+    } else {
+        // Destroy Swiper for screens less than 768px
+        if (swiper) {
+            swiper.destroy();
+            swiper = null;
+        }
+    }
+}
+
+// Initialize Swiper on page load
+initSwiper();
+
+// Reinitialize Swiper on window resize
+window.addEventListener('resize', initSwiper);
+
+})
+
 // Important Linsks
 $(function () {
     $('.ImpLinkCarousel').owlCarousel({
@@ -247,7 +288,7 @@ $(function () {
                 items: 1
             },
             1000: {
-                items: 1
+                items: 3
             }
         }
     })
