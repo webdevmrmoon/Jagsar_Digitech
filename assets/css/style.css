@@ -2189,7 +2189,47 @@ p {
 }
 .serviceWrapper {
     margin-top: 40px;
+    overflow: hidden;
 }
+.serviceWrapper .swiper-slide {
+    padding: 10px;
+}
+.serviceSwiper {
+    position: relative;
+}
+.serviceSwiper  .swiper-button-next:after, .serviceSwiper  .swiper-button-prev:after {
+    display: none;
+}
+.serviceSwiper  .swiper-button-next:before, .serviceSwiper  .swiper-button-prev:before {
+    display: none;
+}
+.serviceSwiper .swiper-button-next {
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    right: 0px;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.serviceSwiper .swiper-button-prev {
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    left: 0px;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.serviceSwiper:hover .swiper-button-prev, .serviceSwiper:hover .swiper-button-next {
+    visibility: visible;
+    opacity: 1;
+}
+
 
 
 .serviceSlider  {
@@ -3395,17 +3435,7 @@ p {
     position:relative;
 }
 .testimonialsCarousel {
-    padding: 0px;
-    border-radius: 0px;
-    position: relative;
-    background-size: 100%;
-    min-height: 306px;
-    overflow: hidden;
-    backdrop-filter: none;
-    clip-path: polygon(0% 11.39%, 0% 11.39%, 0.05% 9.542%, 0.197% 7.79%, 0.431% 6.155%, 0.744% 4.663%, 1.13% 3.336%, 1.58% 2.198%, 2.085% 1.271%, 2.639% 0.581%, 3.232% 0.149%, 3.858% 0%, 96.142% 0%, 96.142% 0%, 96.768% 0.149%, 97.361% 0.581%, 97.915% 1.271%, 98.42% 2.198%, 98.87% 3.336%, 99.256% 4.663%, 99.569% 6.155%, 99.803% 7.79%, 99.949% 9.542%, 100% 11.39%, 100% 78.672%, 100% 78.672%, 99.997% 79.035%, 99.987% 79.396%, 99.971% 79.755%, 99.948% 80.109%, 99.919% 80.46%, 99.884% 80.805%, 99.843% 81.145%, 99.796% 81.478%, 99.743% 81.804%, 99.684% 82.122%, 96.813% 96.616%, 96.813% 96.616%, 96.678% 97.22%, 96.524% 97.773%, 96.353% 98.271%, 96.167% 98.713%, 95.966% 99.094%, 95.753% 99.412%, 95.53% 99.665%, 95.298% 99.849%, 95.059% 99.962%, 94.814% 100%, 3.858% 100%, 3.858% 100%, 3.232% 99.851%, 2.639% 99.419%, 2.085% 98.729%, 1.58% 97.802%, 1.13% 96.664%, 0.744% 95.337%, 0.431% 93.845%, 0.197% 92.21%, 0.05% 90.458%, 0% 88.61%, 0% 11.39%);
-    background: linear-gradient(90deg, #1cb2ff, #008bd5);
-    padding: 50px;
-    position: relative;
+
 }
 .testimonialsCarousel .item {
     position: relative;
@@ -3449,7 +3479,15 @@ p {
 }
 .testimonialCard {
     margin-bottom: 12px;
-   
+    background-size: 100%;
+    min-height: 306px;
+    overflow: hidden;
+    backdrop-filter: none;
+    /* clip-path: polygon(0% 11.39%, 0% 11.39%, 0.05% 9.542%, 0.197% 7.79%, 0.431% 6.155%, 0.744% 4.663%, 1.13% 3.336%, 1.58% 2.198%, 2.085% 1.271%, 2.639% 0.581%, 3.232% 0.149%, 3.858% 0%, 96.142% 0%, 96.142% 0%, 96.768% 0.149%, 97.361% 0.581%, 97.915% 1.271%, 98.42% 2.198%, 98.87% 3.336%, 99.256% 4.663%, 99.569% 6.155%, 99.803% 7.79%, 99.949% 9.542%, 100% 11.39%, 100% 78.672%, 100% 78.672%, 99.997% 79.035%, 99.987% 79.396%, 99.971% 79.755%, 99.948% 80.109%, 99.919% 80.46%, 99.884% 80.805%, 99.843% 81.145%, 99.796% 81.478%, 99.743% 81.804%, 99.684% 82.122%, 96.813% 96.616%, 96.813% 96.616%, 96.678% 97.22%, 96.524% 97.773%, 96.353% 98.271%, 96.167% 98.713%, 95.966% 99.094%, 95.753% 99.412%, 95.53% 99.665%, 95.298% 99.849%, 95.059% 99.962%, 94.814% 100%, 3.858% 100%, 3.858% 100%, 3.232% 99.851%, 2.639% 99.419%, 2.085% 98.729%, 1.58% 97.802%, 1.13% 96.664%, 0.744% 95.337%, 0.431% 93.845%, 0.197% 92.21%, 0.05% 90.458%, 0% 88.61%, 0% 11.39%); */
+    background: linear-gradient(90deg, #1cb2ff, #008bd5);
+    padding: 50px;
+    border-radius: 40px;
+    position: relative;
 }
 .testimonialCard * {
     color: #fff;
@@ -8838,6 +8876,12 @@ body.dark .hamburger .line {
 
 
 @media screen and (max-width:768px) {
+    .mobNone {
+        display: none;
+    }
+    .serviceSwiper .swiper-wrapper {
+        flex-wrap: wrap;
+    } 
     .bnrshapeone img, .bnrshapetwo img, .bnrshapethree img {
         display: none;
     }
@@ -9129,8 +9173,8 @@ body.dark .hamburger .line {
     .headerNav {
         position: fixed;
         display: none;
-        background: linear-gradient(48deg, #0c0c0c, #2e2d2e);
-        top: 60px;
+        background: linear-gradient(48deg, #012549, #003663);
+        top: 120px;
         width: 100%;
         height: 100vh;
         left: 0px;
@@ -9198,10 +9242,10 @@ body.dark .hamburger .line {
     }
   
     .headerSection.scroll-down .headerNav {
-        top: 41px;
+        top: 86px;
     }
     .headerSection.scroll-up .headerNav {
-        top: 41px;
+        top: 86px;
     }
 
     .headerMenu>li a:hover:after {
@@ -10149,16 +10193,19 @@ body.dark .hamburger .line {
         display: none;
     }
     .testimonialsCarousel {
-        padding: 27px;
+        /* padding: 27px; */
         border-radius: 20px;
         position: relative;
-        background: linear-gradient(90deg, #1cb2ff, #008bd5);
+        background: transparent;
         background-size: 100%;
         background-position: bottom;
         min-height: auto;
         overflow: hidden;
-        backdrop-filter: blur(6px);
-        box-shadow: 0px 0px 10px #ddd;
+        /* backdrop-filter: blur(6px); */
+        /* box-shadow: 0px 0px 10px #ddd; */
+    }
+    .testimonialCard {
+        padding: 20px;
     }
     .footer-logo-wrp img {
         width: 57%;
