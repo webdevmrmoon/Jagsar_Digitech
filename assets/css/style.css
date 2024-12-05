@@ -685,7 +685,7 @@ p {
     border-radius: 10px;
 }
 .bannerContent h2 {
-    font-size: 72px;
+    font-size: 42px;
     font-weight: 600;
     line-height: normal;
     margin-bottom: 10px;
@@ -829,12 +829,20 @@ p {
 
 .inrbnr {
     position: relative;
-    min-height: 200px;
-    background: linear-gradient(83deg, #fff4de59, #ffe1e1ab), url(../img/bgs/inner-bnr-bg.png);
+    min-height: 300px;
+    background: linear-gradient(83deg, #011c3a00, #011c3a2e), url(../img/bgs/inner-bnr-bg.jpg);
     background-size: 100%;
+    padding-top: 50px;
 
 }
-
+@media screen and (max-width:2200px) and (min-width:1699px) {
+    .inrbnr {
+        min-height: 370px;
+    }
+    .inrbnrContent {
+        height: 250px;
+    }
+}
 .inrbnrimg {
     width: 100%;
     height: 200px;
@@ -856,18 +864,21 @@ p {
 .inrbnrContent {
     position: relative;
     z-index: 2;
-    height: 200px;
-    display: flex;
+    height: 240px;
+    display: flex
+;
     align-items: center;
     justify-content: center;
 }
 
 .inrbnrtext h2 {
-    font-size: 32px;
-    color: #431616;
+    font-size: 51px;
+    color: #ffffff;
     font-weight: 600;
 }
-
+.inrbrnNav a {
+    color: #fff;
+}
 .inrbrnNav {
     display: flex;
     align-items: center;
@@ -887,7 +898,7 @@ p {
 
 .inrbrnNav li {
     position: relative;
-    border-right: 1px solid #00248b;
+    border-right: 1px solid #1ab1ff;
     padding: 0px 10px;
 }
 
@@ -896,7 +907,7 @@ p {
 }
 
 .inrbrnNav li:last-child a {
-    color: #d97600;
+    color: #f05f02;
     font-weight: 600;
 }
 
@@ -935,6 +946,11 @@ p {
     gap: 10px;
 }
 @media screen and (max-width:1700px) and (min-width:1378px) {
+    .headerMenu {
+        gap: 40px;
+    }
+}
+@media screen and (max-width:2200px) and (min-width:1699px) {
     .headerMenu {
         gap: 40px;
     }
@@ -2482,9 +2498,13 @@ p {
     margin: auto;
 } */
 .newBtn a, .newBtn button {
-    /* display: inline-block; */
-    display: inline-flex;
-    align-items: center;
+       /* display: inline-block; */
+       display: inline-flex
+       ;
+           align-items: center;
+           outline: none;
+           border: none;
+           background: transparent;
 }
 .newBtn a .nbtnarrow, .newBtn button .nbtnarrow {
     width: 50px;
@@ -2535,17 +2555,21 @@ p {
     background: #f9fafc85;
 }
 .ourValuesWrap{
-    margin-top: 50px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 3;
 }
 .ourvaluestile {
-    padding: 35px;
+    padding: 26px;
     border-radius: 40px;
-    min-height: 280px;
+    min-height: 250px;
     margin-bottom: 0px;
-    background: #fff;
+    background: linear-gradient(45deg, #fffaf7, #fff6f1);
     background-size: 100% 100%;
     background-blend-mode: lighten;
     position: relative;
+    box-shadow: 0px 0px 15px #dfdfdf;
+    border: 1px solid #ffe4d3
 }
 .ourvaluestile.tile1 {
     background-color: #effbff;
@@ -2928,8 +2952,9 @@ p {
 }
 .popDestiContent h4 {
     margin-bottom: 4px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
+    padding-right: 38px;
 }
 .popDestiContent p {
     width:85%;
@@ -3808,7 +3833,7 @@ p {
     margin-bottom: 12px;
     color: #1aaffb;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 28px;
     font-weight: 600;
 }
 
@@ -4739,6 +4764,77 @@ p {
 }
 
 
+.somepointCard {
+    padding: 30px;
+    text-align: center;
+    background: radial-gradient(#e6f1ff24, #e6f1ff8f), url(../img/bgs/bg3.jpg);
+    background-size: 100%;
+    border-radius: 20px;
+    border: 1px solid #def4ff;
+    min-height: 192px;
+    margin-bottom: 22px;
+    clip-path: polygon(0% 18.45%, 0% 18.45%, 0.157% 15.457%, 0.613% 12.619%, 1.342% 9.971%, 2.319% 7.554%, 3.52% 5.404%, 4.921% 3.56%, 6.496% 2.059%, 8.22% 0.941%, 10.07% 0.241%, 12.019% 0%, 87.981% 0%, 87.981% 0%, 89.93% 0.241%, 91.78% 0.941%, 93.504% 2.059%, 95.079% 3.56%, 96.48% 5.404%, 97.681% 7.554%, 98.658% 9.971%, 99.387% 12.619%, 99.843% 15.457%, 100% 18.45%, 100% 65.451%, 100% 65.451%, 99.99% 66.039%, 99.959% 66.624%, 99.909% 67.204%, 99.839% 67.778%, 99.749% 68.346%, 99.64% 68.905%, 99.512% 69.456%, 99.364% 69.996%, 99.198% 70.524%, 99.014% 71.039%, 90.069% 94.518%, 90.069% 94.518%, 89.65% 95.497%, 89.171% 96.392%, 88.638% 97.199%, 88.057% 97.914%, 87.432% 98.532%, 86.77% 99.048%, 86.074% 99.458%, 85.351% 99.756%, 84.606% 99.938%, 83.844% 100%, 12.019% 100%, 12.019% 100%, 10.07% 99.759%, 8.22% 99.059%, 6.496% 97.941%, 4.921% 96.44%, 3.52% 94.596%, 2.319% 92.446%, 1.342% 90.029%, 0.613% 87.381%, 0.157% 84.543%, 0% 81.55%, 0% 18.45%);
+    position: relative;
+}
+@media screen and (max-width:1920px) and (min-width: 1699px) {
+    .somepointCard {
+        min-height: 140px;
+    }
+}
+.somepointCard h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #252525;
+}
+.somepointCard p {
+    line-height: normal;
+    font-size: 14px;
+    line-height: 23px;
+    color: #707070;
+}
+
+
+.serviceSection.sectionTwo {
+    background: linear-gradient(360deg, #fbfbfb, transparent);
+}
+.serviceSection .serviceWrapper {
+    margin-top: 0px;
+}
+.contactSection {
+    background: linear-gradient(180deg, #efefefd9, #edededde), url(../img/bgs/bg4.jpg);
+    background-size: cover;
+}
+.somepointCard.contactCard {
+    text-align: left;
+    border: none;
+    clip-path: none;
+    box-shadow: none;
+    background:transparent;
+    padding: 0px;
+    min-height: 0px;
+}
+.contactContent {
+    clip-path: polygon(0% 18.45%, 0% 18.45%, 0.157% 15.457%, 0.613% 12.619%, 1.342% 9.971%, 2.319% 7.554%, 3.52% 5.404%, 4.921% 3.56%, 6.496% 2.059%, 8.22% 0.941%, 10.07% 0.241%, 12.019% 0%, 87.981% 0%, 87.981% 0%, 89.93% 0.241%, 91.78% 0.941%, 93.504% 2.059%, 95.079% 3.56%, 96.48% 5.404%, 97.681% 7.554%, 98.658% 9.971%, 99.387% 12.619%, 99.843% 15.457%, 100% 18.45%, 100% 65.451%, 100% 65.451%, 99.99% 66.039%, 99.959% 66.624%, 99.909% 67.204%, 99.839% 67.778%, 99.749% 68.346%, 99.64% 68.905%, 99.512% 69.456%, 99.364% 69.996%, 99.198% 70.524%, 99.014% 71.039%, 90.069% 94.518%, 90.069% 94.518%, 89.65% 95.497%, 89.171% 96.392%, 88.638% 97.199%, 88.057% 97.914%, 87.432% 98.532%, 86.77% 99.048%, 86.074% 99.458%, 85.351% 99.756%, 84.606% 99.938%, 83.844% 100%, 12.019% 100%, 12.019% 100%, 10.07% 99.759%, 8.22% 99.059%, 6.496% 97.941%, 4.921% 96.44%, 3.52% 94.596%, 2.319% 92.446%, 1.342% 90.029%, 0.613% 87.381%, 0.157% 84.543%, 0% 81.55%, 0% 18.45%);
+    padding: 30px;
+    min-height: 230px;
+    background:#fff;
+}
+.somepointCard.contactCard img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+.somepointCard.contactCard h4 {
+    font-size: 18px;
+}
+
+.somepointCard.contactCard .contactbtn {
+    border: 4px solid #efefef;
+}
+.somepointCard.contactCard .contactbtn img {
+    width: 100%;
+    margin-bottom: 0px;
+}
 
 .foungerSection {
     background: linear-gradient(45deg, #181828, #181828), url(../img/bgs/main-texture.webp);
@@ -5573,14 +5669,9 @@ ul.footerSocial i {
 }
 
 .right-sidebar-box {
-    background-color: #f8f8f800;
-    border-radius: 6px;
-    padding: 0px;
-    max-width: 100% px;
     margin: 0px auto;
     background: #ffffff;
-    padding: 25px 30px;
-    border-radius: 0px;
+    padding: 60px;
     border: 1px solid #dddddd4a;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
@@ -5654,7 +5745,7 @@ textarea.form-control {
 
 .right-sidebar-box .custom-form .custom-input .form-control:focus {
     box-shadow: none;
-    border: 1px solid #49c258 !important;
+    border: 1px solid #f05f02 !important;
 }
 
 .captcha {
@@ -5764,10 +5855,6 @@ textarea.form-control {
     line-height: 20px;
     font-weight: 600;
     /* display: block; */
-}
-
-.contactWrapper {
-    margin-top: 50px;
 }
 
 .contactInfoWrap .row .col-md-12:last-child .contactUsCard {
@@ -6695,11 +6782,21 @@ textarea.form-control {
 }
 .mapSection {
     width: 100%;
-    height: 100%;
+    height: 450px;
+    border-radius: 40px;
+    overflow: hidden;
+    border: 4px solid #fff;
+    box-shadow: 0px 0px 20px #ddd;
+}
+.formMap {
+    background: linear-gradient(0deg, #fbfbfb, transparent);
+}
+.contactForm {
+    margin-top: -130px;
 }
 .contactusFromCard {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border-radius: 20px;
+    border-radius: 40px;
     overflow: hidden;
     background: #fff;
 }
@@ -7046,6 +7143,63 @@ textarea.form-control {
     margin-left: 0px;
 }
 
+
+.stickyForm {
+   
+}
+.formContainer {
+    padding: 0px 11px;
+}
+.stickyFormWrap {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 93%;
+    z-index: 4;
+    background: #e9e9e9c9;
+    padding: 19px;
+    border-radius: 30px;
+    margin: auto;
+    border: 1px solid #eaeaea;
+    box-shadow: none;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    backdrop-filter: blur(7px);
+}
+.stickyFormWrap h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.stickyFormWrap input {
+    border-radius: 30px;
+    padding: 12px 14px;
+    border: 1px solid #e9e9e9;
+    width: 100%;
+}
+.stickyFormWrap span {
+    padding: 11px 16px;
+    background: #ddd;
+    border-radius: 30px;
+}
+.formContainer .row {
+    gap: 0px 10px;
+    flex-wrap: nowrap;
+}
+.formCol {
+    display: inline-block;
+    width: 21%;
+    padding: 0px;
+}
+.captchaWrap {
+    display:flex;
+    align-items: center;
+    gap: 10px;
+}
+.newBtn.stickyfBtn {
+    width: fit-content;
+    padding-right: 0px;
+}
 
 /* user panel css*/
 
@@ -8586,7 +8740,7 @@ body.dark .hamburger .line {
 
     .defaultBtn a span,
     .defaultBtn button span {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .logoSection {
@@ -8876,8 +9030,14 @@ body.dark .hamburger .line {
 
 
 @media screen and (max-width:768px) {
+    .right-sidebar-box {    padding: 30px;}
+    #whatsapp {    margin-bottom: 40px;}
+    .scrollToTop {    bottom: 72px;}
     .mobNone {
         display: none;
+    }
+    .bannerCaraousel .item {
+        padding-top: 0px;
     }
     .serviceSwiper .swiper-wrapper {
         flex-wrap: wrap;
@@ -8991,9 +9151,6 @@ body.dark .hamburger .line {
     .rs-addon-number {
         margin-bottom: 20px;
     }
-    .headerRightMenuWrap {
-        display: none;
-    }
     .headerRightMenuWrap.mobile {
         display: block;
         z-index: 5;
@@ -9027,15 +9184,36 @@ body.dark .hamburger .line {
     }
     .headerRightMenuWrap {
         position: fixed;
+        bottom: 10px;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+        width: 94%;
+    }
+    .headerCallMenu {
+        width: 100%;
+        height: 48px;
+        display: inline-block;
+        background: #f05f02;
+        text-align: center;
+        line-height: 51px;
+        border-radius: 30px;
+        color: #fff;
     }
     .defaultBtn.light2 a {
         background: #e9efff;
         color: #2f075a;
     }
+    .stickyFormWrap {
+        bottom: 67px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
 
     .headerRightMenu {
-        margin-right: 10px;
+        margin-right: 0px;
         justify-content: space-between;
+        align-items: center;
     }
     .headerRightMenu li {
         width: 49%;
@@ -9066,6 +9244,7 @@ body.dark .hamburger .line {
 
     .bannerSection {
         padding-top: 0px;
+        height: 916px;
     }
 
     .headerSection.scroll-down .logoSection img {
@@ -9082,6 +9261,7 @@ body.dark .hamburger .line {
         width: 100%;
         left: 0px;
         top: 0px;
+        
     }
     .headerSection.scroll-up .headerMenu>li {
         padding: 0px;
@@ -9107,14 +9287,18 @@ body.dark .hamburger .line {
     }
 
     .defaultBtn.light2 a {
-        height: 38px;
+        height: 42px;
         padding: 8px 11px;
+        width: 100%;
     }
 
     .headerRightMenu .defaultBtn a,
     .headerRightMenu .defaultBtn button {
-        height: 38px;
-        padding: 8px 11px;
+        height: 47px;
+        padding: 11px 11px;
+        width: 100%;
+        position: relative;
+        top: -5px;
     }
 
     .headerRightMenu .defaultBtn a i,
@@ -9125,7 +9309,9 @@ body.dark .hamburger .line {
     .hamburger {
         display: block;
     }
-
+    .headerRightMenu .defaultBtn a i, .headerRightMenu .defaultBtn button i {
+        display: none;
+    }
     .whyRowContainer {
         padding: 0px 20px;
     }
@@ -9174,7 +9360,7 @@ body.dark .hamburger .line {
         position: fixed;
         display: none;
         background: linear-gradient(48deg, #012549, #003663);
-        top: 120px;
+        top: 72px;
         width: 100%;
         height: 100vh;
         left: 0px;
@@ -9185,7 +9371,26 @@ body.dark .hamburger .line {
     .headerMenu {
         flex-direction: column;
     }
-
+    .pb-50 {
+        padding-bottom: 20px;
+    }
+    
+    .pt-50 {
+        padding-top: 20px;
+    }
+    .formContainer .row {
+        flex-wrap: wrap;
+        gap: 10px 10px;
+    }
+    .stickyFormWrap h4 {
+        font-size: 15px;
+    }
+    .stickyFormWrap input {
+        padding: 10px 14px;
+    }
+    .formCol {
+        width: 47%;
+    }
     .headerSubNav {
         display: none;
         width: 100%;
@@ -9893,8 +10098,9 @@ body.dark .hamburger .line {
 
     .inrbnr {
         margin-top: 0px;
-        min-height: 100px;
-        background: linear-gradient(90deg, #d9e2ff, #fff5ea);
+        min-height: 201px;
+        background: linear-gradient(83deg, #011c3a00, #011c3a2e), url(../img/bgs/inner-bnr-bg.jpg);
+        background-size: cover
     }
 
     .inrbnrimg {
@@ -9917,8 +10123,9 @@ body.dark .hamburger .line {
 
     .inrbnrContent {
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        align-items: end;
+        text-align: right;
+        height: 140px;
     }
 
     .headerSection.scroll-down .topHeadContact ul:last-child li {
@@ -9992,7 +10199,7 @@ body.dark .hamburger .line {
         flex-direction: column-reverse;
     }
     .logoSection img {
-        width: 230px;
+        width: 120px;
     }
     .clientCard {
         width: auto;
