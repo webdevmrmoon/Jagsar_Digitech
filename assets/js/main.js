@@ -534,22 +534,28 @@ $(document).ready(function () {
     var lastScrollTop = 0;
 
     $(window).scroll(function (event) {
-        var st = $(this).scrollTop();
-        if (st > lastScrollTop && st >= 100) {
-            // downscroll code
-            $('.headerSection').addClass('scroll-down').removeClass('scroll-up');
-        } else {
-            // upscroll code
-            $('.headerSection').addClass('scroll-up').removeClass('scroll-down');
-        }
+        if ($(window).width() >= 768) { // Check if viewport width is greater than or equal to 768px
+            var st = $(this).scrollTop();
+            if (st > lastScrollTop && st >= 100) {
+                // downscroll code
+                $('.headerSection').addClass('scroll-down').removeClass('scroll-up');
+            } else {
+                // upscroll code
+                $('.headerSection').addClass('scroll-up').removeClass('scroll-down');
+            }
 
-        if (Math.abs($('.headerSection').offset().top) <= 1) {
+            if (Math.abs($('.headerSection').offset().top) <= 1) {
+                $('.headerSection').removeClass('scroll-down scroll-up');
+            }
+
+            lastScrollTop = st;
+        } else {
+            // Reset classes for responsive view
             $('.headerSection').removeClass('scroll-down scroll-up');
         }
-
-        lastScrollTop = st;
     });
 });
+
 
 
 
