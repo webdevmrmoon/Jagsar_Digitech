@@ -10339,7 +10339,10 @@ body.dark .hamburger .line {
         align-items: center;
     }
     .bannerContent p {
-        text-align: center;
+        text-align: left;
+    }
+    .inrbnr.servicesBanner .bannerWrap {
+        padding-bottom: 50px;
     }
     .bannerAction {
         display: flex;
