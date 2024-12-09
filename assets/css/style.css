@@ -601,6 +601,14 @@ p {
     backdrop-filter: blur(5px);
 }
 
+.headerSection.scroll-down .headerMenu>li>a::after {
+    bottom: 22px;
+}
+
+.headerSection.scroll-up .headerMenu>li>a::after {
+bottom: 22px;
+}
+
 
 .headerWrapper {
     display: flex;
@@ -3754,7 +3762,7 @@ p {
 }
 
 .newsDate ul li i {
-    color: #f7ab4a;
+    color: #f05f02;
     font-size: 13px;
     margin-right: 7px;
 }
@@ -4796,7 +4804,7 @@ p {
 
 
 .serviceSection.sectionTwo {
-    background: linear-gradient(360deg, #fbfbfb, transparent);
+    background: linear-gradient(360deg, #fbfbfb, #fbfbfb);
 }
 .serviceSection .serviceWrapper {
     margin-top: 0px;
@@ -6227,6 +6235,10 @@ textarea.form-control {
     line-height: 23px;
     color: #707070;
 }
+.blogsWrapper.inner .item {
+    position: relative;
+}
+
 .certiContentText {
     margin-top: 40px;
 }
@@ -6337,6 +6349,9 @@ textarea.form-control {
 
 .blogMainImg img {
     width: 100%;
+    border-radius: 50px;
+    height: 400px;
+    object-fit: cover;
 }
 
 .blogMainHeader {
@@ -6353,7 +6368,7 @@ textarea.form-control {
 
 .blogdSidebar {
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 35px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: sticky;
     top: 60px;
@@ -6397,7 +6412,7 @@ textarea.form-control {
 }
 
 .thumbnail a img {
-    border-radius: 5px;
+    border-radius: 21px;
     min-height: 70px;
     object-fit: cover;
     max-width: 70px;
@@ -8152,7 +8167,28 @@ body.dark .hamburger .line {
     color: #fff;
 }
 
-
+.inrbnr.servicesBanner {
+    background: linear-gradient(83deg, #0011247a, #1a1a1a6e), url(../img/bgs/service-inner-bnr.jpg);
+    background-size: 100%;
+}
+.inrbnr.servicesBanner .bannerContentWrapper {
+    min-height: auto;
+}
+.inrbnr.servicesBanner .bannerWrap {
+    padding-top: 0px;
+}
+.inrbnr.servicesBanner .banneranchor {
+    margin-bottom: 14px;
+    margin-top: 0px;
+}
+.bannerInput.servicebnrInput {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.inrbnr.servicesBanner .bannerContent p {
+    margin-bottom: 22px;
+}
 
 
 @media screen and (max-width:1240px) and (min-width:1000px) {
@@ -10368,7 +10404,12 @@ body.dark .hamburger .line {
         position: absolute;
         z-index: 555;
     }
-  
+    .banneranchor {
+        display: flex
+        ;
+            flex-wrap: wrap;
+            gap: 8px 1px;
+    }
 }
 
 
@@ -10393,7 +10434,7 @@ body.dark .hamburger .line {
         font-weight: 600;
         line-height: 41px;
         margin-bottom: 17px;
-        text-align: center;
+        text-align: left;
     }
     .bannerAction {
         flex-direction: column;
